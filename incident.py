@@ -9,7 +9,7 @@ class Incident:
         self.description = kwargs.get('description', {})
         self.fire_department = kwargs.get('fire_department', {})
         self.version = kwargs.get('version', {})
-        self.units = []
+        self.units = None
 
     def get_address(self):
         return self.address
@@ -40,3 +40,9 @@ class Incident:
 
     def set_version(self, version):
         self.version = version
+
+    def get_units(self):
+        return self.units
+
+    def set_units(self, units):
+        self.units = units
