@@ -10,6 +10,7 @@ class Incident:
         self.fire_department = kwargs.get('fire_department', {})
         self.version = kwargs.get('version', {})
         self.units = None
+        self.weather = None
 
     def get_address(self):
         return self.address
@@ -46,3 +47,9 @@ class Incident:
 
     def set_units(self, units):
         self.units = units
+
+    def get_weather(self):
+        return self.weather
+
+    def set_weather(self, weather):
+        self.weather = weather
