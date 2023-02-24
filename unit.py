@@ -2,7 +2,7 @@
 
 class Unit:
 
-    def __int__(self, **kwargs):
+    def __init__(self, **kwargs):
 
         self.car_id = kwargs.get('car_id', '')
         self.extended_data = kwargs.get('extended_data', {})
