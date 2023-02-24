@@ -1,3 +1,4 @@
+import incident_builder
 import json
 import os
 import pandas as pd
@@ -9,7 +10,7 @@ from unit import Unit
 def main():
     json_path = 'data'
     json_list = []
-    incident_list = []
+    incidents_raw = []
 
     for file in os.listdir(json_path):
         if file.endswith('.json'):
@@ -19,7 +20,9 @@ def main():
         with open(os.path.join(json_path, j)) as json_file:
             incident_json = json.load(json_file)
 
-        incident_list.append(incident_json)
+        incidents_raw.append(incident_json)
+
+    incidents_transformed = incident_builder.create_incidents(incidents_raw)
 
 
 if __name__ == "__main__":
