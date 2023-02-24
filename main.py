@@ -1,4 +1,5 @@
 import incident_builder
+import incident_enricher
 import json
 import os
 import pandas as pd
@@ -25,8 +26,7 @@ def main():
 
     incidents = incident_builder.create_incidents(incidents)
     incidents = unit_builder.create_units(incidents)
-
-    x=1
+    incidents = incident_enricher.enrich(incidents)
 
 
 if __name__ == "__main__":
