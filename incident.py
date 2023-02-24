@@ -9,6 +9,7 @@ class Incident:
         self.description = kwargs.get('description', {})
         self.fire_department = kwargs.get('fire_department', {})
         self.version = kwargs.get('version', {})
+        self.units = []
 
     def get_address(self):
         return self.address
